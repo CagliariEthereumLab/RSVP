@@ -1,0 +1,19 @@
+{
+  "name": "RSVP",
+  "version": "1.0.0",
+  "description": "Core fore testing and deploy Smart Contract",
+  "main": "config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "RSVP-COMPILE": "truffle compile",
+    "RSVP-DEPLOY": "truffle migrate --reset --network ganache"
+  },
+  "author": "CagliariEthereumLab",
+  "license": "ISC",
+  "dependencies": {
+    "package.json": "^2.0.1"
+  }
+}
