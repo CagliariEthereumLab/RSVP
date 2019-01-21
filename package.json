@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "RSVP-COMPILE": "truffle compile",
-    "RSVP-DEPLOY": "truffle migrate --reset --network ganache"
+    "RSVP-DEPLOY": "truffle migrate --reset --network ganache",
+    "RSVP-TEST" : "truffle test --network ganache"
   },
   "author": "CagliariEthereumLab",
   "license": "ISC",

@@ -43,7 +43,6 @@ contract("Step 1", async accounts => {
     });
 
     it("Verify stakes", async () => {
-
         for (let i = 0; i < stakes.length; i++) {
             let r = await RSVP.verifyCode.call(stakes[i]);
             assert.equal(r, true);
