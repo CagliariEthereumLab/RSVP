@@ -29,7 +29,7 @@ let stakes = [
     "tre",
     "quattro"
 ];
-
+//
 
 async function init() {
     accounts = await utils.getAccounts();
