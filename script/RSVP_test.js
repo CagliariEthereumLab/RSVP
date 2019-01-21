@@ -15,11 +15,13 @@ const net_conf = config.networks[network];
 var web3 = utils.getWeb3(net_conf);
 
 const artifactRSVP = require('../build/RSVP');
+const artifactKeccak256 = require('../build/Keccak256');
 
 
 let accounts;
 let account_admin;
 let rsvpAddress;
+let keccak256Address;
 
 let stakes = [
     "uno",
@@ -40,13 +42,18 @@ async function init() {
 async function deploy() {
 
     let RSVP = utils.getContractByArtifact(artifactRSVP, account_admin);
+    let Keccak256 = utils.getContractByArtifact(artifactKeccak256, account_admin);
 
     console.log('Attempting to deploy contract from account ', account_admin);
 
     result = await RSVP.new();
     rsvpAddress = result.address;
+    console.log("RSVP address: " + rsvpAddress);
 
-    console.log("address: " + rsvpAddress);
+    result = await RSVP.new();
+    keccak256Address = result.address;
+    console.log("Keccak256 address: " + keccak256Address);
+
 }
 
 async function insert() {
