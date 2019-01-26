@@ -1,23 +1,20 @@
+
+module.exports = 
 {
   "title": "RSVP",
-  "contracts_directory": "./contracts/RSVP/contracts/",
-  "contracts_build_directory": "./contracts/RSVP/build/",
-  "contract_deployed_directory": "contracts/RSVP/deployed",
-  "migrations_directory": "contracts/RSVP/migrations/",
-  "test_directory" : "contracts/RSVP/test/",
   "networks": {
     "development": {
       "host": "127.0.0.1",
       "port": 8545,
       "network_id": "*",
-      "gas": 300000000,
+      "gas": 3000000,
       "gasPrice": 50
     },
     "ganache": {
       "host": "127.0.0.1",
       "port": 9545,
       "network_id": "5777",
-      "gas": 300000000,
+      "gas": 3000000,
       "gasPrice": 50
     },
     "ropsten": {
@@ -33,4 +30,4 @@
       "gasPrice": 1100000000
     }
   }
-}
+};
