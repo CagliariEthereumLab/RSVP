@@ -1,12 +1,8 @@
-console.log("============================ RSVP_test.js - RSVP Test");
 const util = require('util');
 
 
-const contractFileName1 = "Keccak256";
-var keccak256 = artifacts.require("./" + contractFileName1 + ".sol");
-
-const contractFileName2 = "RSVP";
-var rsvp = artifacts.require("./" + contractFileName2 + ".sol");
+var keccak256 = artifacts.require("./Keccak256.sol");
+var rsvp = artifacts.require("./RSVP.sol");
 
 contract("Step 1", async accounts => {
 
@@ -20,14 +16,13 @@ contract("Step 1", async accounts => {
         "quattro"
     ];
 
-    it("Deploy contracts", async () => {
-        Keccak256 = await keccak256.deployed();
-        // console.log("Keccak256 deployed at: " + Keccak256.address);
 
-        RSVP = await rsvp.deployed();
-        // console.log("RSVP deployed at: " + RSVP.address);
-
+    before(async function () {
+        RSVP = await rsvp.new();
+        Keccak256 = await keccak256.new();
     });
+
+
 
     it("Insert stakes", async () => {
 
